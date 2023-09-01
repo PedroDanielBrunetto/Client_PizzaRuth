@@ -1,0 +1,119 @@
+header{
+    position: sticky;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #7D2C2C;
+    box-shadow: 0 4px 41px rgb(14 55 54 / 14%);
+    padding: 15px 10%;
+    transition: 0.2s;
+}
+
+.navbar a{
+    font-size: 1rem;
+    padding: 11px 20px;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.active a{
+    font-size: 1rem;
+    padding: 11px 20px;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.active a:hover{
+    color: #FD5959;
+}
+
+.navbar a:hover{
+    color: #FD5959;
+}
+
+.menu-icon{
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1001;
+    display: none;
+}
+
+@media (max-width: 1236px){
+    header{
+        padding: 14px 4%;
+    }
+}
+
+@media (max-width: 1150px) {
+    header{
+        padding: 18px 7%;
+    }
+}
+@media (max-width: 991px) {
+    header{
+        padding: 18px 4%;
+    }
+}
+@media (max-width: 768px) {
+    header{
+        padding: 11px 4%;
+    }
+    .menu-icon{
+        display: initial;
+    }
+    header .navbar{
+        position: absolute;
+        top: -500px;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        background: #7D2C2C;
+        box-shadow: 0 4px 4px rgb(14 55 54 / 14%);
+        border-top: 2px solid white;
+        text-align: left;
+        transition: 0.3s;
+    }
+    .navbar a{
+        padding: 1.5rem;
+        display: block;
+        color: black;
+        font-weight: 600;
+    }
+    .navbar a:hover{
+        color: #FD5959;
+    }
+    .active{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        background: #fff;
+        box-shadow: 0 4px 4px rgb(14 55 54 / 14%);
+        border-top: 2px solid white;
+        text-align: left;
+        transition: 0.3s;
+    }
+    .active a{
+        padding: 1.5rem;
+        display: block;
+        color: var(--second-color);
+        font-weight: 600;
+    }
+    .active a:hover{
+        color: #FD5959;
+    }
+    .xC{
+        display:none;
+    }
+    .xO{
+        display: initial;
+    }
+}
