@@ -4,11 +4,13 @@ import menu from "../assets/menu.png"
 import login from "../assets/login.png"
 import { useState } from "react"
 import { useRef } from "react"
+import { useNavigate } from "react-router-dom"
 
 export default function Header(){
     const dropDownRef = useRef(null);
     const [isActive, setIsActive] = useState(false);
     const onClick = () => setIsActive(!isActive);
+    const navigate = useNavigate();
 
     return(
         <header className="w-full">
@@ -23,7 +25,7 @@ export default function Header(){
                 <li><a href="#" onClick={onClick} className={` ${isActive ? "xC" : "xO"}`}>Pizzas</a></li>
                 <li><a href="#" onClick={onClick} className={` ${isActive ? "xC" : "xO"}`}>Promoções</a></li>
                 <li><a href="#" onClick={onClick} className={`  ${isActive ? "xC" : "xO"}`}>SOBRE A PIZZA RUTH</a></li>
-                <button className="md:mb-3"><img src={login} className="w-14 md:7"/></button>
+                <a className="md:mb-3" href="/acesso"><img src={login} className="w-14 md:7"/></a>
             </ul>
         </header>
     )
