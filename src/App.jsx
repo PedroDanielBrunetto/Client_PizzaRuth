@@ -28,6 +28,42 @@ const pizzas = [{
   'image': mussarela,
   'sabor': 'Mussarela',
   'valor': '25,00'
+},
+{
+  'id': 4,
+  'image': frango,
+  'sabor': 'Frango especial',
+  'valor': '35,00'
+},
+{
+  'id': 5,
+  'image': napolitana,
+  'sabor': 'Napolitana italiana',
+  'valor': '52,00'
+},
+{
+  'id': 6,
+  'image': marguerita,
+  'sabor': 'Marguerita clássica',
+  'valor': '40,00'
+},
+{
+  'id': 7,
+  'image': california,
+  'sabor': 'Californication',
+  'valor': '30,00'
+},
+{
+  'id': 8,
+  'image': romeujulieta,
+  'sabor': 'Romeu e Julieta',
+  'valor': '30,00'
+},
+{
+  'id': 9,
+  'image': brigadeiro,
+  'sabor': 'Brigadeiro',
+  'valor': '30,00'
 }
 ]
 
@@ -36,11 +72,10 @@ function App() {
   return (
     <>
       <Header/>
-
-      <h2 className="pb-6 text-5xl font-bold text-red-900 text-center p-12 uppercase">MAIS COMPRADAS</h2>
-      
+    <section id="pizzas">
+      <h2 className="pb-6 text-5xl font-bold text-red-900 text-center p-12 uppercase">Nossas Pizzas</h2>
       <section className="flex justify-center p-12 media">
-        <div className="flex gap-12 md:flex-col">
+        <div className="flex gap-12 md:flex-col flex-wrap">
           {pizzas.map((pizza) => 
           <div key={pizza.id}>
             <Card nome={pizza.sabor} valor={pizza.valor} image={pizza.image}/>
@@ -48,6 +83,7 @@ function App() {
           )}
         </div>
       </section>
+    </section>
     </>
   )
 }

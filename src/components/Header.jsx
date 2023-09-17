@@ -22,7 +22,7 @@ export default function Header(){
                 <img src={menu} className={`menu-icon w-10 ${isActive ? "xO" : "xC"}`} />
             </button>
             <ul ref={dropDownRef} className={`flex items-center ${isActive ? "active" : "navbar"}`}>
-                <li><a href="#" onClick={onClick} className={` ${isActive ? "xC" : "xO"}`}>Pizzas</a></li>
+                <li><a href="#pizzas" onClick={onClick} className={` ${isActive ? "xC" : "xO"}`}>Pizzas</a></li>
                 <li><a href="#" onClick={onClick} className={` ${isActive ? "xC" : "xO"}`}>Promoções</a></li>
                 <li><a href="#" onClick={onClick} className={`  ${isActive ? "xC" : "xO"}`}>SOBRE A PIZZA RUTH</a></li>
                 <a className="md:mb-3" href="/acesso"><img src={login} className="w-14 md:7"/></a>

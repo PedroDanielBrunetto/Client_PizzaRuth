@@ -7,7 +7,7 @@ export default function Card(props){
             <div className="pt-4 flex flex-col gap-2">
                 <h1 className="text-center text-xl font-semibold">{props.nome}</h1>
                 <h3 className="text-center text-lg font-medium">R$ {props.valor}</h3>
-                <div className="items-center text-center"><button><img src={carrinho} className="w-12"/></button></div>
+                <div className="items-center flex justify-center"><button className="flex items-center font-bold"><img src={carrinho} className="w-12"/> COMPRAR</button></div>
             </div>
             
         </div>
