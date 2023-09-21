@@ -10,6 +10,9 @@ import mussarela from "./assets/pizzas/mussarela.jpg"
 import napolitana from "./assets/pizzas/napolitana.jpg"
 import portuguesa from "./assets/pizzas/portuguesa.jpg"
 import romeujulieta from "./assets/pizzas/romeujulieta.jpg"
+import Landing from "./components/Landing"
+
+import nossaspizzas from "./assets/text_nossaspizzas.png"
 
 const pizzas = [{
   'id': 1,
@@ -72,8 +75,12 @@ function App() {
   return (
     <>
       <Header/>
+    
+    <section>
+      <Landing/>
+    </section>
     <section id="pizzas">
-      <h2 className="pb-6 text-5xl font-bold text-red-900 text-center p-12 uppercase">Nossas Pizzas</h2>
+      <div className="w-full items-center flex justify-center"><img src={nossaspizzas} className="w-[486px]"/></div>
       <section className="flex justify-center p-12 media">
         <div className="flex gap-12 md:flex-col flex-wrap">
           {pizzas.map((pizza) => 

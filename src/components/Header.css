@@ -6,11 +6,28 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #7D2C2C;
+    z-index: 1000;
     box-shadow: 0 4px 41px rgb(14 55 54 / 14%);
     padding: 15px 10%;
     transition: 0.2s;
 }
+
+@keyframes slidein {
+  from {
+    transform: translateX(0%);]
+    opacity: 0;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 1;
+  }
+}
+
+.scrolled {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,0.8) 0%, rgba(233,28,52,0.8) 100%, rgba(0,212,255,0.8) 100%);
+}
+
 
 .navbar a{
     font-size: 1rem;

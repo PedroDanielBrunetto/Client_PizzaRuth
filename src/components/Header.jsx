@@ -12,8 +12,13 @@ export default function Header(){
     const onClick = () => setIsActive(!isActive);
     const navigate = useNavigate();
 
+    window.addEventListener("scroll", function() {
+        var header = document.querySelector("header");
+        header.classList.toggle("scrolled", window.scrollY > 50);
+    });
+
     return(
-        <header className="w-full">
+        <header className="w-full header">
             <div className="logo">
                 <img src={logo} alt={logo} className="w-24"/>
             </div>
